@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Made by Ben Perlmutter as part of the Odin Project -->
+<!-- January 2020 -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/07987f6265.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+
+</head>
+
+<body>
+    <div id="main">
+        <h1>MiLibary</h1>
+
+        <div id="library">
+            <div class="book">
+                <h3 class="book-title">Algorithms to Live By</h3>
+                <p class="book-author">Brian Christian</p>
+                <p class="book-year-published">2016</p>
+                <p class="book-description">"A fascinating exploration of how computer algorithms can be applied to our
+                    everyday lives." - Google books
+                </p>
+                <p class="book-read">Read Status: <span id="book-read-status"><i class="fas fa-times"
+                            id="book-unread"></i></span> </p>
+            </div>
+            <div class="book">
+                <h3 class="book-title">Algorithms to Live By</h3>
+                <p class="book-author">Brian Christian</p>
+                <p class="book-year-published">2016</p>
+                <p class="book-description">"A fascinating exploration of how computer algorithms can be applied to our
+                    everyday lives." - Google books
+                </p>
+                <p class="book-read">Read Status: <span id="book-read-status"><i class="fas fa-times"
+                            id="book-unread"></i></span>
+                </p>
+            </div>
+            <div class="book">
+                <h3 class="book-title">Algorithms to Live By</h3>
+                <p class="book-author">Brian Christian</p>
+                <p class="book-year-published">2016</p>
+                <p class="book-description">"A fascinating exploration of how computer algorithms can be applied to our
+                    everyday lives." - Google books
+                </p>
+                <p class="book-read">Read Status: <span id="book-read-status"><i class="fas fa-times"
+                            id="book-unread"></i></span>
+                </p>
+            </div>
+        </div>
+
+        <form class="form-container">
+            <fieldset>
+                <legend>Add Book</legend>
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" placeholder="Title" name="title" required>
+                </div>
+
+                <div>
+                    <label for="author">Author</label>
+                    <input type="text" placeholder="Author Name" name="author" required>
+                </div>
+
+                <div>
+                    <label for="year">Year Published</label>
+                    <input type="text" placeholder="Publication Year" name="year">
+                </div>
+
+                <div>
+                    <label for="description">Description</label>
+                    <textarea type="text" placeholder="Short book description" name="description"></textarea>
+                </div>
+
+
+                <div>
+                    <label for="read_status">Have you read it?</label>
+                    <input type="radio" name="read-status" id="read" value="read" class="radio" />
+                    <label for="read" class="radio-label">Yes</label>
+                    <input type="radio" name="read-status" id="unread" value="unread" class="radio" />
+                    <label for="unread" class="radio-label">No</label>
+                </div>
+
+                <div id="form-buttons">
+                    <button type="submit" id="submit">Add Book!</button>
+                    <button id="cancel">Cancel</button>
+                </div>
+            </fieldset>
+        </form>
+
+
+    </div>
+
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
