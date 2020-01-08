@@ -1,0 +1,120 @@
+body{
+    background-image: url(library-background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: monospace;
+    font-size: 16px;
+    color: 	#404040;
+}
+h1{
+    text-align: center;
+    font-size: 2em;
+}
+form button:focus {
+  outline:0;
+}
+form button:hover{
+    border: darkgray 1px solid;
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+fieldset{
+    border-radius: 1rem;
+
+}
+legend{
+    font-size: 1.5em;
+    border: 1px solid #404040;
+    border-radius: 1rem;
+    padding: .2rem 1rem;
+    margin: 0 .5rem;
+    background-color: whitesmoke;
+}
+
+fieldset div{
+    margin: 1rem 0;
+}
+
+label{
+    display:inline-block;
+    text-align:right;
+    font-size: 16px;
+    width: 200px;
+}
+input, textarea{
+    width: 450px;
+}
+
+.book{
+    width: 220px;
+    border: 1px #404040 solid;
+    border-radius: .5rem;
+    background-color: whitesmoke;
+    padding: .75rem;
+    display: inline-block;
+    margin: .3rem;
+}
+.book p{
+    font-size: 12px;
+}
+.book:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#book-unread{
+    color: red;
+    font-size: 14px;
+}
+.radio{
+    width:auto !important;
+}
+.radio-label{
+    width: auto !important;
+}
+
+#main{
+    background-color: rgb(255,255,255, .85);
+    height: auto;
+    width: auto;
+    margin:0 10%;
+
+    margin-top: 4%;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    border-radius: 3rem;
+}
+
+#library{
+    padding: 3rem 0;
+    display: flexbox;
+    align-content: center;
+}
+
+#submit{
+    background-color: #404040;
+    color: whitesmoke;
+    border-radius: .5rem;
+    font-size: 16px;
+    font-family: monospace;
+    padding: .5rem;
+}
+#submit:hover{
+    border: #404040 solid 1px;
+    background-color: #a2a2a2;
+    color: whitesmoke;
+}
+
+
+#cancel{
+    border: #404040 solid 1px;
+    background-color: whitesmoke;
+    border-radius: .5rem;
+    font-size: 16px;
+    font-family: monospace;
+    padding: .5rem;
+}
+#cancel:hover{
+    background-color: #a2a2a2;
+    color: whitesmoke;
+}
+
+
