@@ -10,6 +10,10 @@ h1{
     text-align: center;
     font-size: 2em;
 }
+form{
+    width: 800px;
+    margin: 0 auto;
+}
 form button:focus {
   outline:0;
 }
@@ -43,24 +47,35 @@ label{
 }
 input, textarea{
     width: 450px;
+    border-radius: 1px;
+    border: 1px solid whitesmoke;
+    font-family: monospace;
+    font-size: 14px;
 }
+
+
 
 .book{
     width: 220px;
+    height: 220px;
     border: 1px #404040 solid;
     border-radius: .5rem;
     background-color: whitesmoke;
-    padding: .75rem;
     display: inline-block;
+    padding: .75rem;
     margin: .3rem;
+    overflow: auto;
 }
 .book p{
     font-size: 12px;
 }
-.book:hover{
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+
+.book-read{
+    color: springgreen;
+    font-size: 14px;
 }
-#book-unread{
+.book-unread{
     color: red;
     font-size: 14px;
 }
@@ -85,11 +100,46 @@ input, textarea{
 
 #library{
     padding: 3rem 0;
-    display: flexbox;
-    align-content: center;
+
 }
 
-#submit{
+#book-icon{
+    height: 75px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.book-button{
+    background-color: #404040;
+    color: whitesmoke;
+    border-radius: .5rem;
+    font-size: 12px;
+    font-family: monospace;
+    padding: .5rem;
+    width: 100px;
+    height: 50px;
+    text-align: left;
+    margin: .2rem;
+    vertical-align: top;
+
+}
+.book-button:focus{
+    outline: 0;
+}
+.book-button:hover{
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.book-button:active{
+    background-color: #a2a2a2;
+}
+
+.remove-book{
+    text-align: center !important;
+}
+
+
+.adder{
     background-color: #404040;
     color: whitesmoke;
     border-radius: .5rem;
@@ -97,10 +147,13 @@ input, textarea{
     font-family: monospace;
     padding: .5rem;
 }
-#submit:hover{
+.adder:hover{
     border: #404040 solid 1px;
     background-color: #a2a2a2;
     color: whitesmoke;
+}
+.adder:focus{
+    outline: 0;
 }
 
 
@@ -118,3 +171,88 @@ input, textarea{
 }
 
 
+
+/* POP UP BOX */
+/* The Modal (background) */
+.pop-up {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.pop-up-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 2rem;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 888px){
+
+    .pop-up-content input, textarea{
+        width: 100%;
+        display: block;
+
+    }
+    .pop-up-content label{
+        text-align: left;
+        display: block;
+    }
+    input .radio{
+        display: inline-block !important;
+    }
+    label .radio-label{
+        display: inline-block !important;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #main{
+        height: 100%;
+        width: auto;
+        margin: 4%;
+        padding: .2rem;
+    }
+    h1{
+        margin: .5rem .8rem 1rem .8rem;
+        text-align: left;
+        display: inline-block;
+        font-size: 1.5em;
+    }
+    #add-book{
+        display: inline-block;
+        font-size: 12px;
+        height: 2rem;
+    }
+    #library{
+        padding: 0.3rem .5rem;
+    }
+    .book{
+        margin: 1rem .3rem;
+    }
+}
